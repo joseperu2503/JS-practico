@@ -54,7 +54,7 @@ function areaCirculo(radio) {
 
 //Aqui interactuamos con el html
 
-function calcularPerimetroCuadrado() {
+function onClickButtonPerimetroCuadrado() {
     const inputCuadrado = document.getElementById("InputCuadrado");
     const ladoCuadradoValue = inputCuadrado.value;
     const perimetro = perimetroCuadrado(ladoCuadradoValue);
@@ -63,11 +63,29 @@ function calcularPerimetroCuadrado() {
     resultPerimetro.innerText = "El perímetro del cuadrado es: " + perimetro
 }
 
-function calcularAreaCuadrado() {
+function onClickButtonAreaCuadrado() {
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
     const area = areaCuadrado(value);
 
     const resultArea = document.getElementById("ResultArea");
     resultArea.innerText = "El área del cuadrado es: " + area
+}
+
+function onClickButtonPerimetroCirculo() {
+    const inputCirculo = document.getElementById("InputCirculo");
+    const radioCirculoValue = inputCirculo.value;
+    const perimetro_circulo = perimetroCirculo(radioCirculoValue);
+    
+    const resultPerimetroCirculo = document.getElementById("ResultPerimetroCirculo");
+    resultPerimetroCirculo.innerText = "El perímetro del circulo es: " + perimetro_circulo.toFixed(3)
+}
+
+function onClickButtonAreaCirculo() {
+    const inputCirculo = document.getElementById("InputCirculo");
+    const radioCirculoValue = inputCirculo.value;
+    const area_circulo = areaCirculo(radioCirculoValue);
+
+    const resultAreaCirculo = document.getElementById("ResultAreaCirculo");
+    resultAreaCirculo.innerText = "El área del circulo es: " + area_circulo.toFixed(3)
 }

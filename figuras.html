@@ -14,28 +14,54 @@
         </h1>
     </header>
     <main>
-        <article class="cuadrado">
-            <div class="cuadrado-title">
-                <p></p>
-                <h2>Cuadrado</h2>
-            </div>
-            <div class="cuadrado-calculo">
-                <form class="cuadrado-form" action="">
-                    <label for="InputCuadrado">
-                        Escribe cuanto mide cada lado del cuadrado
-                    </label>
-                    <input class="cuadrado-input" id="InputCuadrado" type="number">
-                    <button class="cuadrado-button" type="button" onclick="calcularPerimetroCuadrado()">
-                        Calcular el perímetro
-                    </button>
-                    <button class="cuadrado-button" type="button" onclick="calcularAreaCuadrado()">
-                        calcular el área
-                    </button>   
-                </form>
-                <p class="resultado" id="ResultPerimetro" ></p>
-                <p class="resultado" id="ResultArea" ></p>
-            </div>
-        </article>
+        <div class="figuras-grid">
+            <article class="cuadrado">
+                <div class="cuadrado-title">
+                    <p class="cuadrado-figura"></p>
+                    <h2>Cuadrado</h2>
+                </div>
+                <div class="calculo">
+                    <form class="cuadrado-form" action="">
+                        <label for="InputCuadrado">
+                            Escribe cuanto mide cada lado del cuadrado
+                        </label>
+                        <input class="cuadrado-input" id="InputCuadrado" type="number">
+                        <button class="cuadrado-button" type="button" onclick="onClickButtonPerimetroCuadrado()">
+                            Calcular el perímetro
+                        </button>
+                        <button class="cuadrado-button" type="button" onclick="onClickButtonAreaCuadrado()">
+                            calcular el área
+                        </button>   
+                    </form>
+                    <p class="resultado" id="ResultPerimetro" ></p>
+                    <p class="resultado" id="ResultArea" ></p>
+                </div>
+            </article>
+    
+            <article class="cuadrado">
+                <div class="circulo-title">
+                    <p class="circulo-figura"></p>
+                    <h2>Circulo</h2>
+                </div>
+                <div class="calculo">
+                    <form class="cuadrado-form" action="">
+                        <label for="InputCirculo">
+                            Escribe cuanto mide el radio del circulo
+                        </label>
+                        <input class="cuadrado-input" id="InputCirculo" type="number">
+                        <button class="cuadrado-button" type="button" onclick="onClickButtonPerimetroCirculo()">
+                            Calcular el perímetro
+                        </button>
+                        <button class="cuadrado-button" type="button" onclick="onClickButtonAreaCirculo()">
+                            calcular el área
+                        </button>   
+                    </form>
+                    <p class="resultado" id="ResultPerimetroCirculo" ></p>
+                    <p class="resultado" id="ResultAreaCirculo" ></p>
+                </div>
+            </article>
+        </div>
+        
 
 
     </main>

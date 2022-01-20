@@ -34,9 +34,20 @@ main {
     padding-top: 18px;  
 }
 
+.figuras-grid {
+    width: 80%;
+    min-width: 280px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit , minmax(280px , 400px));
+    gap: 20px;
+    margin: 0 auto;
+}
+
 .cuadrado {
     min-width: 280px;
-    width: 90%;
+    width: 100%;
+    height: min-content;
     margin: 0 auto;
     padding: 5% calc(5% - 2px);
 
@@ -44,14 +55,15 @@ main {
     border: 2px solid #CDA53E;
     box-sizing: border-box;
     border-radius: 10px;
-    }
+}
 
-.cuadrado-title {
+.cuadrado-title,
+.circulo-title {
     display: flex;
     align-items: center;
 }
 
-.cuadrado-title p {
+.cuadrado-figura {
     width: 40px;
     height: 40px;
 
@@ -60,6 +72,7 @@ main {
     border-radius: 5px;
 }
 
+.circulo-title h2,
 .cuadrado-title h2 {
     padding-left: 10px;
     font-family: DM Sans;
@@ -71,7 +84,7 @@ main {
     color: #000000;
 }
 
-.cuadrado-calculo {
+.calculo {
     margin-top: 33px;
 }
 
@@ -145,4 +158,12 @@ main {
     /* identical to box height */
     text-align: center;
     color: #2A359C;
+}
+
+
+.circulo-figura {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #000000;
+    border-radius: 20px;
 }
