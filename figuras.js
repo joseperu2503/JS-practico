@@ -1,14 +1,3 @@
-//codigo del cuadrado
-console.group("Cuadrados");
-// const ladoCuadrado = 5;
-// console.log("Los lados del cuadrado miden: " + ladoCuadrado + " cm");
-
-// const perimetroCuadrado = ladoCuadrado * 4;
-// console.log("El perimetro del cuadrado es: " + perimetroCuadrado + " cm");
-
-// const areaCuadrado = ladoCuadrado * ladoCuadrado;
-// console.log("El area del cuadrado es: " + areaCuadrado + " cm^2");
-console.groupEnd();
 
 function perimetroCuadrado(lado) {
     return lado * 4;
@@ -20,27 +9,16 @@ function areaCuadrado(lado) {
 
 
 
-//codigo del triangulo
-console.group("Triangulos");
-
-// const ladoTriangulo1 = 6;
-// const ladoTriangulo2 = 6;
-// const baseTriangulo = 4;
-// const alturaTriangulo = 5.5;
-
-// console.log("los lados del triangulo miden: " + ladoTriangulo1 + "cm, " + ladoTriangulo2 + "cm, " + baseTriangulo + "cm" );
-
-// console.log("la altura del triangulo mide: " + alturaTriangulo + "cm");
-
-function perimetroTriangulo(lado1 , lado2 , base) {
-    return lado1 + lado2 + base;
+function perimetroTriangulo(lado1 , lado2 , lado3) {
+    return lado1 + lado2 + lado3;
 }
 
-function areaTriangulo(base , altura) {
-    return base*altura;
+function areaTriangulo(lado1 , lado2, lado3) {
+    s = perimetroTriangulo(lado1 , lado2 , lado3) /2;
+    area = Math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3));
+    return area;
 }
 
-console.groupEnd();
 
 const pi = Math.PI;
 
@@ -89,3 +67,59 @@ function onClickButtonAreaCirculo() {
     const resultAreaCirculo = document.getElementById("ResultAreaCirculo");
     resultAreaCirculo.innerText = "El área del circulo es: " + area_circulo.toFixed(3)
 }
+
+//triangulo
+
+function onClickButtonPerimetroTriangulo() {
+    const lado1 = document.getElementById("Lado1");
+    const lado1Value = lado1.value;
+
+    const lado2 = document.getElementById("Lado2");
+    const lado2Value = lado2.value;
+
+    const lado3 = document.getElementById("Lado3");
+    const lado3Value = lado3.value;
+
+    const area_triangulo = areaTriangulo(lado1Value-0 , lado2Value-0, lado3Value-0);
+    const perimetro_triangulo = perimetroTriangulo(lado1Value-0, lado2Value-0, lado3Value-0);
+    
+    const resultPerimetroTriangulo = document.getElementById("ResultPerimetroTriangulo");
+
+    if (isNaN(area_triangulo)) {
+        resultPerimetroTriangulo.innerText = "No existe triangulo con esos lados ";
+    }
+    else {
+        resultPerimetroTriangulo.innerText = "El perímetro del triángulo es: " + perimetro_triangulo;
+    }   
+}
+
+function onClickButtonAreaTriangulo() {
+    const lado1 = document.getElementById("Lado1");
+    const lado1Value = lado1.value;
+
+    const lado2 = document.getElementById("Lado2");
+    const lado2Value = lado2.value;
+
+    const lado3 = document.getElementById("Lado3");
+    const lado3Value = lado3.value;
+
+
+    const area_triangulo = areaTriangulo(lado1Value-0 , lado2Value-0, lado3Value-0);
+
+    const resultAreaTriangulo = document.getElementById("ResultAreaTriangulo");
+
+    if(isNaN(area_triangulo)) {
+        resultAreaTriangulo.innerText = "No existe triangulo con esos lados ";
+    }
+    else if (area_triangulo - Math.floor(area_triangulo) != 0) {
+        resultAreaTriangulo.innerText = "El área del triángulo es: " + area_triangulo.toFixed(3);
+    }
+    else {
+        resultAreaTriangulo.innerText = "El área del triángulo es: " + area_triangulo;
+    }
+
+
+    
+}
+
+

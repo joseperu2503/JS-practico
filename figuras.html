@@ -38,7 +38,7 @@
                 </div>
             </article>
     
-            <article class="cuadrado">
+            <article class="circulo">
                 <div class="circulo-title">
                     <p class="circulo-figura"></p>
                     <h2>Circulo</h2>
@@ -58,6 +58,32 @@
                     </form>
                     <p class="resultado" id="ResultPerimetroCirculo" ></p>
                     <p class="resultado" id="ResultAreaCirculo" ></p>
+                </div>
+            </article>
+
+            <article class="triangulo">
+                <div class="triangulo-title">
+                    <p class="triangulo-figura"></p>
+                    <h2>Triángulo</h2>
+                </div>
+                <div class="calculo">
+                    <form class="cuadrado-form" action="">
+                        <label for="InputCirculo">
+                            Escribe cuanto miden los lados del triangulo
+                        </label>
+                        <input class="cuadrado-input" id="Lado1" type="number">
+                        <input class="cuadrado-input" id="Lado2" type="number">
+                        <input class="cuadrado-input" id="Lado3" type="number">
+
+                        <button class="cuadrado-button" type="button" onclick="onClickButtonPerimetroTriangulo()">
+                            Calcular el perímetro
+                        </button>
+                        <button class="cuadrado-button" type="button" onclick="onClickButtonAreaTriangulo()">
+                            calcular el área
+                        </button>   
+                    </form>
+                    <p class="resultado" id="ResultPerimetroTriangulo" ></p>
+                    <p class="resultado" id="ResultAreaTriangulo" ></p>
                 </div>
             </article>
         </div>
