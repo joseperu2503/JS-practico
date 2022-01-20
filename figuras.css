@@ -36,13 +36,17 @@ main {
 
 .cuadrado {
     min-width: 280px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-}
+    padding: 5% calc(5% - 2px);
+
+    background: #E7E7E7;
+    border: 2px solid #CDA53E;
+    box-sizing: border-box;
+    border-radius: 10px;
+    }
 
 .cuadrado-title {
-    position: relative;
-    left: calc(50% - 272px / 2);
     display: flex;
     align-items: center;
 }
