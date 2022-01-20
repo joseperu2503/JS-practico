@@ -5,30 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras geométricas </title>
+    <link rel="stylesheet" href="figuras.css">
 </head>
 <body>
     <header>
         <h1>
-            Figuras Geométricas
+            PRISMA DEL NORTE
         </h1>
-        <p>Este es el primer taller del curso práctico de Javascript.</p>
     </header>
+    <main>
+        <section class="cuadrado">
+            <div class="cuadrado-title">
+                <p></p>
+                <h2>Cuadrado</h2>
+            </div>
+            <div class="cuadrado-calculo">
+                <form class="cuadrado-form" action="">
+                    <label for="InputCuadrado">
+                        Escribe cuanto mide cada lado del cuadrado
+                    </label>
+                    <input class="cuadrado-input" id="InputCuadrado" type="number">
+                    <button class="cuadrado-button" type="button" onclick="calcularPerimetroCuadrado()">
+                        Calcular el perímetro
+                    </button>
+                    <button class="cuadrado-button" type="button" onclick="calcularAreaCuadrado()">
+                        calcular el área
+                    </button>   
+                </form>
+                <p class="resultado" id="ResultPerimetro" ></p>
+                <p class="resultado" id="ResultArea" ></p>
+            </div>
+        </section>
 
-    <section>
-        <h2>Calcula el area y perietro de un cuadrado</h2>
-        <form action="">
-            <label for="InputCuadrado">
-                Escribe cuanto mide cada lado de tu cuadrado:
-            </label>
-            <input type="number" id="InputCuadrado" >
-            <button type="button" onclick="calcularPerimetroCuadrado()">
-                Calcular el perímetro
-            </button>
-            <button type="button" onclick="calcularAreaCuadrado()">
-                calcular el área
-            </button>
-        </form>
-    </section>
+
+    </main>
+
+    
 
     
     <script src="./figuras.js"></script>

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 62.5%;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background-color: #41608E;
+}
+
+header h1 {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+
+    color: #FFFFFF;
+    line-height: 90px;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    height: 800px;
+    background-color: #E7E7E7;
+    padding-top: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    
+}
+
+.cuadrado-title {
+    position: relative;
+    left: calc(50% - 272px / 2);
+    display: flex;
+    align-items: center;
+}
+
+.cuadrado-title p {
+    width: 40px;
+    height: 40px;
+
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.cuadrado-title h2 {
+    padding-left: 10px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+
+    color: #000000;
+}
+
+.cuadrado-calculo {
+    margin-top: 33px;
+}
+
+.cuadrado-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.cuadrado-form label {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+}
+
+.cuadrado-input {
+    margin-top: 17px;
+    width: 100px;
+    height: 32px;
+
+    background: #FFFFFF;
+    border: 1px solid #969191;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 16px;
+
+    text-align: center;
+
+}
+
+.cuadrado-button {
+    margin-top: 17px;
+
+    width: 272px;
+    height: 32px;
+
+    background: #FFDC5F;
+    border: 1px solid #CDA53E;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 16px;
+
+    text-align: center;
+}
+
+.resultado {
+    margin-bottom: 10px ;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 16px;
+    /* identical to box height */
+    text-align: center;
+    color: #2A359C;
+}
